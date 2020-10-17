@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import javax.swing.BorderFactory;
-import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JFrame;
@@ -13,9 +12,7 @@ import javax.swing.JButton;
 
 public class GUICajones extends JFrame implements ActionListener {
 
-    boolean statusA1 = false,statusA2 = false,statusA3 = false,statusA4 = false,statusA5 = false
-            ,statusA6 = false,statusA7 = false,statusA8 = false,statusA9 = false,statusA10 = false, statusA11 = false,statusA12 = false,statusA13 = false,statusA14 = false,statusA15 = false
-            ,statusB1 = false,statusB2 = false,statusB3 = false,statusB4 = false,statusB5 = false,statusB6 = false,statusB7 = false,statusB8 = false,statusB9 = false,statusB10 = false,statusB11 = false,statusB12 = false,statusB13 = false,statusB14 = false,statusB15 = false,statusC1 = false,statusC2 = false,statusC3 = false,statusC4 = false,statusC5 = false,statusC6 = false,statusC7 = false,statusC8 = false,statusC9 = false,statusC10 = false,statusC11 = false,statusC12 = false,statusC13 = false,statusC14 = false,statusC15 = false;
+    boolean statusA1 = false, statusA2 = false, statusA3 = false, statusA4 = false, statusA5 = false, statusA6 = false, statusA7 = false, statusA8 = false, statusA9 = false, statusA10 = false, statusA11 = false, statusA12 = false, statusA13 = false, statusA14 = false, statusA15 = false, statusB1 = false, statusB2 = false, statusB3 = false, statusB4 = false, statusB5 = false, statusB6 = false, statusB7 = false, statusB8 = false, statusB9 = false, statusB10 = false, statusB11 = false, statusB12 = false, statusB13 = false, statusB14 = false, statusB15 = false, statusC1 = false, statusC2 = false, statusC3 = false, statusC4 = false, statusC5 = false, statusC6 = false, statusC7 = false, statusC8 = false, statusC9 = false, statusC10 = false, statusC11 = false, statusC12 = false, statusC13 = false, statusC14 = false, statusC15 = false;
     HiloCajon A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11, B12, B13, B14, B15, C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15;
 
     public GUICajones() {
@@ -37,6 +34,30 @@ public class GUICajones extends JFrame implements ActionListener {
         JPanel PanelCajon = new javax.swing.JPanel();
         PanelCajon.setSize(1300, 637);
         this.add(PanelCajon);
+
+        JLabel LBLNombreAlumno = new JLabel("Pino Martin Vargas Marquez.");
+
+        LBLNombreAlumno.setBounds(500, 620, 180, 20);
+        PanelCajon.add(LBLNombreAlumno);
+
+        JLabel LBLMatricula = new JLabel("ES172005165");
+        LBLMatricula.setBounds(680, 620, 180, 20);
+        PanelCajon.add(LBLMatricula);
+
+        JLabel LBLTituloPrincipal = new JLabel("ESTACIONAMIENTO");
+        LBLTituloPrincipal.setFont(new Font("Helvetica", Font.PLAIN, 18));
+        LBLTituloPrincipal.setBounds(550, 30, 180, 20);
+        PanelCajon.add(LBLTituloPrincipal);
+
+        JLabel LBLLogo = new javax.swing.JLabel();
+        LBLLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/logo.png")));
+        LBLLogo.setBounds(400, 10, 100, 100);
+        PanelCajon.add(LBLLogo);
+
+        JLabel LBLSubTitulo = new JLabel("En Buenas Manos");
+        LBLSubTitulo.setFont(new Font("Helvetica", Font.PLAIN, 18));
+        LBLSubTitulo.setBounds(560, 60, 180, 20);
+        PanelCajon.add(LBLSubTitulo);
 
         JLabel LBL1 = new JLabel("1");
         LBL1.setBounds(DerechaIzquierda + 70, ArribaAbajoA + 25, 15, 20);
@@ -338,6 +359,60 @@ public class GUICajones extends JFrame implements ActionListener {
         BTNc15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
         PanelCajon.add(BTNc15);
 
+        JButton BTNAdministrador = new JButton();
+        JButton BTNBoleto = new javax.swing.JButton();
+        JButton BTNCajonDisponible = new JButton();
+        JButton BTNNomina = new JButton();
+        JButton BTNEmpleados = new JButton();
+        JButton BTNSalidas = new JButton("Salida");
+
+        //JLabel LBLLogo = new javax.swing.JLabel();
+        JLabel LBLBoleto = new javax.swing.JLabel("RECEPCION");
+        JLabel LBLAdministrador = new javax.swing.JLabel("REPORTES");
+        JLabel LBLCajon = new javax.swing.JLabel("SALIDA");
+        JLabel LBLNomina = new javax.swing.JLabel("NOMINA");
+        JLabel LBLChat = new javax.swing.JLabel("EMPLEADOS");
+
+        BTNBoleto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/Control.png")));
+        BTNNomina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/Dolares.png")));
+        BTNCajonDisponible.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/Control.png")));
+        BTNEmpleados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/Chat.png")));
+        BTNAdministrador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/Administracion.png")));
+        LBLLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/logo.png")));
+
+        BTNBoleto.setBounds(430, 500, 80, 75);
+        PanelCajon.add(BTNBoleto);
+
+        LBLBoleto.setBounds(440, 575, 150, 20);
+        PanelCajon.add(LBLBoleto);
+
+        BTNNomina.setBounds(526, 500, 80, 75);
+        PanelCajon.add(BTNNomina);
+
+        LBLNomina.setBounds(536, 575, 150, 20);
+        PanelCajon.add(LBLNomina);
+
+        BTNCajonDisponible.setBounds(622, 500, 80, 75);
+        PanelCajon.add(BTNCajonDisponible);
+
+        LBLCajon.setBounds(632, 575, 150, 20);
+        PanelCajon.add(LBLCajon);
+
+        BTNEmpleados.setBounds(718, 500, 80, 75);
+        PanelCajon.add(BTNEmpleados);
+
+        LBLChat.setBounds(728, 575, 150, 20);
+        PanelCajon.add(LBLChat);
+
+        BTNAdministrador.setBounds(814, 500, 80, 75);
+        PanelCajon.add(BTNAdministrador);
+
+        LBLAdministrador.setBounds(824, 575, 150, 20);
+        PanelCajon.add(LBLAdministrador);
+
+        BTNSalidas.setBounds(795, 595, 100, 30);
+        PanelCajon.add(BTNSalidas);
+
         JLabel LBLA1 = new javax.swing.JLabel(Hilo.Horas);
         JLabel LBLA2 = new javax.swing.JLabel(Hilo.Horas);
         JLabel LBLA3 = new javax.swing.JLabel(Hilo.Horas);
@@ -486,10 +561,14 @@ public class GUICajones extends JFrame implements ActionListener {
                     A1 = new HiloCajon(LBLA1);
                     A1.start();
                     statusA1 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("A1");
+                    guiRecepcion.setVisible(true);
                 } else if (statusA1 == true) {
                     A1.stop();
                     LBLA1.setText("0");
                     statusA1 = false;
+                    GUISalida salida = new GUISalida("A1");
+                    salida.setVisible(true);
                     BTNa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -502,10 +581,14 @@ public class GUICajones extends JFrame implements ActionListener {
                     A2 = new HiloCajon(LBLA2);
                     A2.start();
                     statusA2 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("A2");
+                    guiRecepcion.setVisible(true);
                 } else if (statusA2 == true) {
                     A2.stop();
                     LBLA2.setText("0");
                     statusA2 = false;
+                    GUISalida salida = new GUISalida("A2");
+                    salida.setVisible(true);
                     BTNa2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -518,10 +601,14 @@ public class GUICajones extends JFrame implements ActionListener {
                     A3 = new HiloCajon(LBLA3);
                     A3.start();
                     statusA3 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("A3");
+                    guiRecepcion.setVisible(true);
                 } else if (statusA3 == true) {
                     A3.stop();
                     LBLA3.setText("0");
                     statusA3 = false;
+                    GUISalida salida = new GUISalida("A3");
+                    salida.setVisible(true);
                     BTNa3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -534,10 +621,14 @@ public class GUICajones extends JFrame implements ActionListener {
                     A4 = new HiloCajon(LBLA4);
                     A4.start();
                     statusA4 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("A4");
+                    guiRecepcion.setVisible(true);
                 } else if (statusA4 == true) {
                     A4.stop();
                     LBLA4.setText("0");
                     statusA4 = false;
+                    GUISalida salida = new GUISalida("A4");
+                    salida.setVisible(true);
                     BTNa4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -550,10 +641,14 @@ public class GUICajones extends JFrame implements ActionListener {
                     A5 = new HiloCajon(LBLA5);
                     A5.start();
                     statusA5 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("A5");
+                    guiRecepcion.setVisible(true);
                 } else if (statusA5 == true) {
                     A5.stop();
                     LBLA5.setText("0");
                     statusA5 = false;
+                    GUISalida salida = new GUISalida("A5");
+                    salida.setVisible(true);
                     BTNa5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -566,14 +661,18 @@ public class GUICajones extends JFrame implements ActionListener {
                     A6 = new HiloCajon(LBLA6);
                     A6.start();
                     statusA6 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("A6");
+                    guiRecepcion.setVisible(true);
                 } else if (statusA6 == true) {
                     A6.stop();
                     LBLA6.setText("0");
                     statusA6 = false;
+                    GUISalida salida = new GUISalida("A6");
+                    salida.setVisible(true);
                     BTNa6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
-        });        
+        });
         BTNa7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
@@ -582,10 +681,14 @@ public class GUICajones extends JFrame implements ActionListener {
                     A7 = new HiloCajon(LBLA7);
                     A7.start();
                     statusA7 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("A7");
+                    guiRecepcion.setVisible(true);
                 } else if (statusA7 == true) {
                     A7.stop();
                     LBLA7.setText("0");
                     statusA7 = false;
+                    GUISalida salida = new GUISalida("A7");
+                    salida.setVisible(true);
                     BTNa7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -598,10 +701,14 @@ public class GUICajones extends JFrame implements ActionListener {
                     A8 = new HiloCajon(LBLA8);
                     A8.start();
                     statusA8 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("A8");
+                    guiRecepcion.setVisible(true);
                 } else if (statusA8 == true) {
                     A8.stop();
                     LBLA8.setText("0");
                     statusA8 = false;
+                    GUISalida salida = new GUISalida("A8");
+                    salida.setVisible(true);
                     BTNa8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -614,10 +721,14 @@ public class GUICajones extends JFrame implements ActionListener {
                     A9 = new HiloCajon(LBLA9);
                     A9.start();
                     statusA9 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("A9");
+                    guiRecepcion.setVisible(true);
                 } else if (statusA9 == true) {
                     A9.stop();
                     LBLA9.setText("0");
                     statusA9 = false;
+                    GUISalida salida = new GUISalida("A9");
+                    salida.setVisible(true);
                     BTNa9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -630,10 +741,14 @@ public class GUICajones extends JFrame implements ActionListener {
                     A10 = new HiloCajon(LBLA10);
                     A10.start();
                     statusA10 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("A10");
+                    guiRecepcion.setVisible(true);
                 } else if (statusA10 == true) {
                     A10.stop();
                     LBLA10.setText("0");
                     statusA10 = false;
+                    GUISalida salida = new GUISalida("A10");
+                    salida.setVisible(true);
                     BTNa10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -646,10 +761,14 @@ public class GUICajones extends JFrame implements ActionListener {
                     A11 = new HiloCajon(LBLA11);
                     A11.start();
                     statusA11 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("A11");
+                    guiRecepcion.setVisible(true);
                 } else if (statusA11 == true) {
                     A11.stop();
                     LBLA11.setText("0");
                     statusA11 = false;
+                    GUISalida salida = new GUISalida("A11");
+                    salida.setVisible(true);
                     BTNa11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -662,10 +781,14 @@ public class GUICajones extends JFrame implements ActionListener {
                     A12 = new HiloCajon(LBLA12);
                     A12.start();
                     statusA12 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("A12");
+                    guiRecepcion.setVisible(true);
                 } else if (statusA12 == true) {
                     A12.stop();
                     LBLA12.setText("0");
                     statusA12 = false;
+                    GUISalida salida = new GUISalida("A12");
+                    salida.setVisible(true);
                     BTNa12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -678,10 +801,14 @@ public class GUICajones extends JFrame implements ActionListener {
                     A13 = new HiloCajon(LBLA13);
                     A13.start();
                     statusA13 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("A13");
+                    guiRecepcion.setVisible(true);
                 } else if (statusA13 == true) {
                     A13.stop();
                     LBLA13.setText("0");
                     statusA13 = false;
+                    GUISalida salida = new GUISalida("A13");
+                    salida.setVisible(true);
                     BTNa13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -694,10 +821,14 @@ public class GUICajones extends JFrame implements ActionListener {
                     A14 = new HiloCajon(LBLA14);
                     A14.start();
                     statusA14 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("A14");
+                    guiRecepcion.setVisible(true);
                 } else if (statusA14 == true) {
                     A14.stop();
                     LBLA14.setText("0");
                     statusA14 = false;
+                    GUISalida salida = new GUISalida("A14");
+                    salida.setVisible(true);
                     BTNa14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -710,10 +841,14 @@ public class GUICajones extends JFrame implements ActionListener {
                     A15 = new HiloCajon(LBLA15);
                     A15.start();
                     statusA15 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("A15");
+                    guiRecepcion.setVisible(true);
                 } else if (statusA15 == true) {
                     A15.stop();
                     LBLA15.setText("0");
                     statusA15 = false;
+                    GUISalida salida = new GUISalida("A15");
+                    salida.setVisible(true);
                     BTNa15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -726,10 +861,14 @@ public class GUICajones extends JFrame implements ActionListener {
                     B1 = new HiloCajon(LBLB1);
                     B1.start();
                     statusB1 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("B1");
+                    guiRecepcion.setVisible(true);
                 } else if (statusB1 == true) {
                     B1.stop();
                     LBLB1.setText("0");
                     statusB1 = false;
+                    GUISalida salida = new GUISalida("B1");
+                    salida.setVisible(true);
                     BTNb1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -742,10 +881,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     B2 = new HiloCajon(LBLB2);
                     B2.start();
                     statusB2 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("B2");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusB2 == true) {
                     B2.stop();
                     LBLB1.setText("0");
                     statusB2 = false;
+                    GUISalida salida = new GUISalida("B2");
+                    salida.setVisible(true);
                     BTNb2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -758,10 +902,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     B3 = new HiloCajon(LBLB3);
                     B3.start();
                     statusB3 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("B3");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusB3 == true) {
                     B3.stop();
                     LBLB3.setText("0");
                     statusB3 = false;
+                    GUISalida salida = new GUISalida("B3");
+                    salida.setVisible(true);
                     BTNb3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -774,10 +923,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     B4 = new HiloCajon(LBLB4);
                     B4.start();
                     statusB4 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("B4");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusB4 == true) {
                     B4.stop();
                     LBLB4.setText("0");
                     statusB4 = false;
+                    GUISalida salida = new GUISalida("B4");
+                    salida.setVisible(true);
                     BTNb4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -790,10 +944,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     B5 = new HiloCajon(LBLB5);
                     B5.start();
                     statusB5 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("B5");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusB5 == true) {
                     B5.stop();
                     LBLB5.setText("0");
                     statusB5 = false;
+                    GUISalida salida = new GUISalida("B5");
+                    salida.setVisible(true);
                     BTNb5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -806,10 +965,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     B6 = new HiloCajon(LBLB6);
                     B6.start();
                     statusB6 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("B6");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusB6 == true) {
                     B6.stop();
                     LBLB6.setText("0");
                     statusB6 = false;
+                    GUISalida salida = new GUISalida("B6");
+                    salida.setVisible(true);
                     BTNb6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -822,10 +986,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     B7 = new HiloCajon(LBLB7);
                     B7.start();
                     statusB7 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("B7");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusB7 == true) {
                     B7.stop();
                     LBLB7.setText("0");
                     statusB7 = false;
+                    GUISalida salida = new GUISalida("B7");
+                    salida.setVisible(true);
                     BTNb7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -838,10 +1007,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     B8 = new HiloCajon(LBLB8);
                     B8.start();
                     statusB8 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("B8");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusB8 == true) {
                     B8.stop();
                     LBLB8.setText("0");
                     statusB8 = false;
+                    GUISalida salida = new GUISalida("B8");
+                    salida.setVisible(true);
                     BTNb8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -854,10 +1028,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     B9 = new HiloCajon(LBLB9);
                     B9.start();
                     statusB9 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("B9");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusB9 == true) {
                     B9.stop();
                     LBLB9.setText("0");
                     statusB9 = false;
+                    GUISalida salida = new GUISalida("B9");
+                    salida.setVisible(true);
                     BTNb9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -870,10 +1049,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     B10 = new HiloCajon(LBLB10);
                     B10.start();
                     statusB10 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("B10");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusB10 == true) {
                     B10.stop();
                     LBLB10.setText("0");
                     statusB10 = false;
+                    GUISalida salida = new GUISalida("B10");
+                    salida.setVisible(true);
                     BTNb10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -886,10 +1070,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     B11 = new HiloCajon(LBLB11);
                     B11.start();
                     statusB11 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("B11");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusB11 == true) {
                     B11.stop();
                     LBLB11.setText("0");
                     statusB11 = false;
+                    GUISalida salida = new GUISalida("B11");
+                    salida.setVisible(true);
                     BTNb11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -902,10 +1091,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     B12 = new HiloCajon(LBLB12);
                     B12.start();
                     statusB12 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("B12");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusB12 == true) {
                     B12.stop();
                     LBLB12.setText("0");
                     statusB12 = false;
+                    GUISalida salida = new GUISalida("B12");
+                    salida.setVisible(true);
                     BTNb12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -918,10 +1112,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     B13 = new HiloCajon(LBLB13);
                     B13.start();
                     statusB13 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("B13");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusB13 == true) {
                     B13.stop();
                     LBLB13.setText("0");
                     statusB13 = false;
+                    GUISalida salida = new GUISalida("B13");
+                    salida.setVisible(true);
                     BTNb13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -934,10 +1133,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     B14 = new HiloCajon(LBLB14);
                     B14.start();
                     statusB14 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("B14");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusB14 == true) {
                     B14.stop();
                     LBLB14.setText("0");
                     statusB14 = false;
+                    GUISalida salida = new GUISalida("B14");
+                    salida.setVisible(true);
                     BTNb14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -950,10 +1154,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     B15 = new HiloCajon(LBLB15);
                     B15.start();
                     statusB15 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("B15");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusB15 == true) {
                     B15.stop();
                     LBLB15.setText("0");
                     statusB15 = false;
+                    GUISalida salida = new GUISalida("B15");
+                    salida.setVisible(true);
                     BTNb15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -966,10 +1175,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     C1 = new HiloCajon(LBLC1);
                     C1.start();
                     statusC1 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("C");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusC1 == true) {
                     C1.stop();
                     LBLC1.setText("0");
                     statusC1 = false;
+                    GUISalida salida = new GUISalida("C1");
+                    salida.setVisible(true);
                     BTNc1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -982,10 +1196,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     C2 = new HiloCajon(LBLC2);
                     C2.start();
                     statusC2 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("C2");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusC2 == true) {
                     C2.stop();
                     LBLC2.setText("0");
                     statusC2 = false;
+                    GUISalida salida = new GUISalida("C2");
+                    salida.setVisible(true);
                     BTNc2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -998,10 +1217,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     C3 = new HiloCajon(LBLC3);
                     C3.start();
                     statusC3 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("C3");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusC3 == true) {
                     C3.stop();
                     LBLC3.setText("0");
                     statusC3 = false;
+                    GUISalida salida = new GUISalida("C3");
+                    salida.setVisible(true);
                     BTNc3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -1014,10 +1238,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     C4 = new HiloCajon(LBLC4);
                     C4.start();
                     statusC4 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("C4");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusC4 == true) {
                     C4.stop();
                     LBLC4.setText("0");
                     statusC4 = false;
+                    GUISalida salida = new GUISalida("C4");
+                    salida.setVisible(true);
                     BTNc4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -1030,10 +1259,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     C5 = new HiloCajon(LBLC5);
                     C5.start();
                     statusC5 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("C5");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusC5 == true) {
                     C5.stop();
                     LBLC5.setText("0");
                     statusC5 = false;
+                    GUISalida salida = new GUISalida("C5");
+                    salida.setVisible(true);
                     BTNc5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -1046,10 +1280,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     C6 = new HiloCajon(LBLC6);
                     C6.start();
                     statusC6 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("C6");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusC6 == true) {
                     C6.stop();
                     LBLC6.setText("0");
                     statusC6 = false;
+                    GUISalida salida = new GUISalida("C6");
+                    salida.setVisible(true);
                     BTNc6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -1062,10 +1301,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     C7 = new HiloCajon(LBLC7);
                     C7.start();
                     statusC7 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("C7");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusC7 == true) {
                     C7.stop();
                     LBLC7.setText("0");
                     statusC7 = false;
+                    GUISalida salida = new GUISalida("C7");
+                    salida.setVisible(true);
                     BTNc7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -1078,10 +1322,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     C8 = new HiloCajon(LBLC8);
                     C8.start();
                     statusC8 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("C8");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusC8 == true) {
                     C8.stop();
                     LBLC8.setText("0");
                     statusC8 = false;
+                    GUISalida salida = new GUISalida("C8");
+                    salida.setVisible(true);
                     BTNc8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -1094,10 +1343,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     C9 = new HiloCajon(LBLC9);
                     C9.start();
                     statusC9 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("C9");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusC9 == true) {
                     C9.stop();
                     LBLC9.setText("0");
                     statusC9 = false;
+                    GUISalida salida = new GUISalida("C9");
+                    salida.setVisible(true);
                     BTNc9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -1110,10 +1364,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     C10 = new HiloCajon(LBLC10);
                     C10.start();
                     statusC10 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("C10");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusC10 == true) {
                     C10.stop();
                     LBLC10.setText("0");
                     statusC10 = false;
+                    GUISalida salida = new GUISalida("C10");
+                    salida.setVisible(true);
                     BTNc10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -1126,10 +1385,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     C11 = new HiloCajon(LBLC11);
                     C11.start();
                     statusC11 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("C11");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusC11 == true) {
                     C11.stop();
                     LBLC11.setText("0");
                     statusC11 = false;
+                    GUISalida salida = new GUISalida("C11");
+                    salida.setVisible(true);
                     BTNc11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -1142,10 +1406,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     C12 = new HiloCajon(LBLC12);
                     C12.start();
                     statusC12 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("C12");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusC12 == true) {
                     C12.stop();
                     LBLC12.setText("0");
                     statusC12 = false;
+                    GUISalida salida = new GUISalida("C12");
+                    salida.setVisible(true);
                     BTNc12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -1158,10 +1427,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     C13 = new HiloCajon(LBLC13);
                     C13.start();
                     statusC13 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("C13");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusC13 == true) {
                     C13.stop();
                     LBLC13.setText("0");
                     statusC13 = false;
+                    GUISalida salida = new GUISalida("C13");
+                    salida.setVisible(true);
                     BTNc13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -1174,10 +1448,15 @@ public class GUICajones extends JFrame implements ActionListener {
                     C14 = new HiloCajon(LBLC14);
                     C14.start();
                     statusC14 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("C14");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusC14 == true) {
                     C14.stop();
                     LBLC14.setText("0");
                     statusC14 = false;
+                    GUISalida salida = new GUISalida("C14");
+                    salida.setVisible(true);
                     BTNc14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
@@ -1190,16 +1469,47 @@ public class GUICajones extends JFrame implements ActionListener {
                     C15 = new HiloCajon(LBLC15);
                     C15.start();
                     statusC15 = true;
+                    GUIRecepcion guiRecepcion = new GUIRecepcion("C15");
+                    guiRecepcion.setVisible(true);
+
                 } else if (statusC15 == true) {
                     C15.stop();
                     LBLC15.setText("0");
                     statusC15 = false;
+                    GUISalida salida = new GUISalida("C15");
+                    salida.setVisible(true);
                     BTNc15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
                 }
             }
         });
-        
-        
+
+        BTNCajonDisponible.addActionListener((ActionEvent ae) -> {
+            //GUISalida salida = new GUISalida();
+            //salida.setVisible(true);
+            //this.dispose();
+        });
+
+        BTNBoleto.addActionListener((ActionEvent ae) -> {
+            //GUIRecepcion recepcion = new GUIRecepcion();
+            //recepcion.setVisible(true);
+            //this.dispose();
+        });
+
+        BTNEmpleados.addActionListener((ActionEvent ae) -> {
+            GUIEmpleados empleado = new GUIEmpleados();
+            empleado.setVisible(true);
+            this.dispose();
+        });
+
+        BTNAdministrador.addActionListener((ActionEvent ae) -> {
+            GUIEmpleados administracion = new GUIEmpleados();
+            administracion.setVisible(true);
+            this.dispose();
+        });
+        BTNSalidas.addActionListener((ActionEvent ae) -> {
+            System.exit(0);
+        });
+
         PanelCajon.setLayout(null);
         PanelCajon.setVisible(true);
         PanelCajon.setBorder(BorderFactory.createLineBorder(Color.red, 1));

@@ -17,9 +17,11 @@ import javax.swing.JTextField;
 
 public class GUISalida extends JFrame implements ActionListener {
 
-    public GUISalida() {
-        
+    String ubicacion;
+
+    public GUISalida(String Ubicacion) {
         super();
+        this.ubicacion = Ubicacion;
         initComponents();
     }
 
@@ -54,6 +56,9 @@ public class GUISalida extends JFrame implements ActionListener {
         JLabel LBLHoraSalida = new javax.swing.JLabel("Hora de Salida:");
         JLabel LBLMinutosEstancia = new javax.swing.JLabel("Minutos:");
         JLabel LBLTotal = new javax.swing.JLabel("Total $:");
+        JLabel LBLUbicacion = new javax.swing.JLabel("Ubicacion");
+        JLabel LBLLogo = new javax.swing.JLabel();
+        LBLLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dpo3_u2_a2_pivm/img/troncomobilvacio.png")));
 
         JTextField TXBNoBoleto = new javax.swing.JTextField();
         JTextField TXBAcomodador = new javax.swing.JTextField();
@@ -64,6 +69,7 @@ public class GUISalida extends JFrame implements ActionListener {
         JTextField TXBHoraSalida = new javax.swing.JTextField();
         JTextField TXBMinutosEstancia = new javax.swing.JTextField();
         JTextField TXBTotal = new javax.swing.JTextField();
+        JTextField TXBUbicacion = new javax.swing.JTextField(ubicacion);
 
         JButton BTNBuscarCalcular = new javax.swing.JButton("...");
         JButton BTNCobrar = new javax.swing.JButton("Cobrar");
@@ -82,6 +88,8 @@ public class GUISalida extends JFrame implements ActionListener {
         LBLHoraSalida.setBounds(80, 220, 120, 20);
         LBLMinutosEstancia.setBounds(80, 240, 120, 20);
         LBLTotal.setBounds(80, 260, 120, 20);
+        LBLUbicacion.setBounds(80, 280, 120, 20);
+        LBLLogo.setBounds(100, 10, 80, 80);
 
         TXBNoBoleto.setBounds(200, 100, 150, 20);
         TXBAcomodador.setBounds(200, 120, 150, 20);
@@ -92,6 +100,7 @@ public class GUISalida extends JFrame implements ActionListener {
         TXBHoraSalida.setBounds(200, 220, 150, 20);
         TXBMinutosEstancia.setBounds(200, 240, 150, 20);
         TXBTotal.setBounds(200, 260, 150, 20);
+        TXBUbicacion.setBounds(200, 280, 150, 20);
 
         BTNBuscarCalcular.setBounds(360, 100, 50, 20);
         BTNCobrar.setBounds(360, 260, 100, 20);
@@ -110,6 +119,8 @@ public class GUISalida extends JFrame implements ActionListener {
         PanelSalida.add(LBLHoraSalida);
         PanelSalida.add(LBLMinutosEstancia);
         PanelSalida.add(LBLTotal);
+        PanelSalida.add(LBLUbicacion);
+        PanelSalida.add(LBLLogo);
 
         PanelSalida.add(TXBNoBoleto);
         PanelSalida.add(TXBAcomodador);
@@ -120,13 +131,14 @@ public class GUISalida extends JFrame implements ActionListener {
         PanelSalida.add(TXBHoraSalida);
         PanelSalida.add(TXBMinutosEstancia);
         PanelSalida.add(TXBTotal);
+        PanelSalida.add(TXBUbicacion);
         PanelSalida.add(BTNBuscarCalcular);
         PanelSalida.add(BTNCobrar);
         PanelSalida.add(BTNSalida);
 
         BTNSalida.addActionListener((ActionEvent ae) -> {
-            GUIMenu menu = new GUIMenu();
-            menu.setVisible(true);
+            //GUIMenu menu = new GUIMenu();
+            //menu.setVisible(true);
             this.dispose();
         });
         BTNBuscarCalcular.addActionListener((ActionEvent ae) -> {
@@ -137,10 +149,10 @@ public class GUISalida extends JFrame implements ActionListener {
             String HoraEntrada = TXBHoraEntrada.getText();
             double HoraInicio = calculo.limpiandoFecha(HoraEntrada);
             double HoraTermino = calculo.limpiandoFecha(HoraSalida);
-            double diferencia =  HoraTermino-HoraInicio;
+            double diferencia = HoraTermino - HoraInicio;
             String minutosTotales = String.valueOf(diferencia);
             TXBMinutosEstancia.setText(minutosTotales);
-            
+
             double Costo = calculo.calcularTiempo(diferencia);
             String Total = String.valueOf(Costo);
             TXBTotal.setText(Total);
@@ -156,8 +168,6 @@ public class GUISalida extends JFrame implements ActionListener {
         PanelSalida.setBorder(BorderFactory.createLineBorder(Color.red, 1));
 
     }
-
-
 
     @Override
     public void actionPerformed(ActionEvent arg0) {
